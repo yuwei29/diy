@@ -1,0 +1,12 @@
+#11365384762485
+n = int(1e9)
+x = input('timestamp: ')
+x = int(x)
+sec = x//n
+nano = x%n
+# 24 h 60 min 60 s
+h = sec//3600
+minsec = sec%3600
+min = minsec//60
+s = minsec%60
+print(f'h:{h}, m:{min}, s:{s}, nano:{nano}')
