@@ -1,0 +1,4 @@
+import requests as rq
+x = rq.get('http://ip.42.pl/short')
+x = x.text
+print(x)
