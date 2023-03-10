@@ -1,0 +1,10 @@
+import datetime as d
+import os
+print('please type file path')
+f = input()
+print('choose time type: 1 write time 2 create time 3 read time')
+choice = int(input())
+a = os.stat(f)
+l = [a.st_mtime,a.st_ctime,a.st_atime]
+a = d.datetime.utcfromtimestamp(l[choice-1])
+print(a.strftime('%Y-%m-%dT%H:%M:%SZ'))
